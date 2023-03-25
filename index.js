@@ -23,6 +23,11 @@ inquirer
         message: 'Please pick the license used',
         name: 'License',
         questions: [
+            {value: 'Apache 2.0'},
+            {value: 'GNU GPL v3'},
+            {value: 'ISC'},
+            {value: 'MIT'},
+            {value: ''},
         ],
     }
    
