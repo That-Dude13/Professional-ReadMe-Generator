@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require = ('./utils/gererateMarkdown.js');
+const questions = require ([])
 
 inquirer
   .prompt([
@@ -16,6 +17,14 @@ inquirer
       message: 'Enter a description of your project',
       name:'Description',
     },
+
+    {
+        type: 'input',
+        message: 'Please pick the license used',
+        name: 'License',
+        questions: [
+        ],
+    }
    
     {
         type: 'input',
