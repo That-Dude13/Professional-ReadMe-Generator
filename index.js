@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require = ('./utils/gererateMarkdown.js');
-
+const generateMarkdown = require ('./utils/gererateMarkdown.js');
+const README = require ('./utils/README.md')
 
 function init(){
 inquirer
@@ -64,7 +64,17 @@ inquirer
   ]);
 }
 init();
-function writeToFile(generateMarkdown.js, data) {}
+
+
+    
+
+
+fs.writeFile('README.md', data, (err) =>{
+    if (err) { 
+        console.error(err);
+    });
+
+ 
 
 
 
