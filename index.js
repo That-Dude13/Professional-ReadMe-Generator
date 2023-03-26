@@ -2,7 +2,8 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require = ('./utils/gererateMarkdown.js');
 
-function init (){
+
+function init(){
 inquirer
   .prompt([
    
@@ -62,8 +63,8 @@ inquirer
 
   ]);
 }
-
-
+init();
+function writeToFile(generateMarkdown.js, data) {}
 
 
 
