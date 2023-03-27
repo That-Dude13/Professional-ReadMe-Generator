@@ -75,10 +75,18 @@ init();
     
 
 
-// fs.writeFile('README.md', data, (err) =>{
-//     if (err) { 
-//         console.error(err);
-//     });
+
+
+
+const content = 'Some content!';
+
+fs.writeFile('README.md', content, err => {
+  if (err) {
+    console.error(err);
+  }
+  // file written successfully
+});
+
 
  
 
