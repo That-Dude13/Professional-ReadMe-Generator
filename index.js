@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require ('./utils/gererateMarkdown.js');
-const README = require ('./utils/README.md')
+const generateMarkdown = require ('./utils/generateMarkdown.js');
+
 
 function init(){
 inquirer
@@ -10,55 +10,61 @@ inquirer
     {
       type: 'input',
       message: 'What is the title of your project?',
-      name: 'Title',
+      name: 'title',
     },
    
     {
       type: 'input',
       message: 'Enter a description of your project',
-      name:'Description',
+      name:'description',
     },
 
     {
-        type: 'input',
+        type: 'list',
         message: 'Please pick the license used',
-        name: 'License',
+        name: 'license',
         choices: ['Apache 2.0','Apache 2.0','ISC','MIT','None'],
             
         
    
     },
      
-    {   type: 'input',
-        message: 'Please create a Table of Contents',
-        name: 'Table',
-        choices: ['1','2','2','4','5','6'],
-
-    },
-   
     {  
         type: 'input',
         message: 'Please provide installation instructions',
-        name: 'Installation',
+        name: 'installation',
     
     },
    
     {
         type: 'input',
         message: 'Please provide usage information',
-        name: 'Usage',
+        name: 'usage',
     },
    
     {   
         type: 'input',
         message: 'Please provide usage gudielines',
-        name: 'Contributing',
+        name: 'contributing',
     },   
     
     {
         type: 'input',
         message: 'Please provide testing instructions',
-        name: 'Tests',
+        name: 'tests',
+    },
+
+    {
+        type: 'input',
+        message: 'what is your email address?',
+        name: 'email',
+    },
+
+    {
+        type: 'input',
+        messgae: 'what is your GitHub username?',
+        name: 'github',
+
     },
 
   ]);
@@ -69,10 +75,10 @@ init();
     
 
 
-fs.writeFile('README.md', data, (err) =>{
-    if (err) { 
-        console.error(err);
-    });
+// fs.writeFile('README.md', data, (err) =>{
+//     if (err) { 
+//         console.error(err);
+//     });
 
  
 
