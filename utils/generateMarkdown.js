@@ -2,7 +2,7 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
   ${badge(data.license)}
-  ${data.name}
+
   ## Description 
   ${data.description}
   ## Table of Contents 
@@ -26,12 +26,18 @@ function generateMarkdown(data) {
   ## Questions 
   Please email questions to: ${data.email}
   Find this and my other projects at: [${data.github}](https://www.github.com/${data.github})
-  ## Deployed Application 
-  This application was deplopyed at [${data.deploy}](${data.deploy})
   `
   }
-  // ${link(data.license)}
-
+  const generateMarkdown = markdown
+  function generateMarkdown(data) {
+    return `# ${data.title},
+    # ${data.description}, # ${data.installation},
+    # ${data.usage}, # ${data.license}, #${data.tests},
+    # ${data.contributing}, # ${data.email}, # ${data.github}
+    fs.writefile('README.md)
+  
+  `;
+  }
 
 module.exports = generateMarkdown;
 
@@ -43,6 +49,7 @@ module.exports = generateMarkdown;
 
 
 
+//  ${link(data.license)}
 
 
 
@@ -81,4 +88,4 @@ module.exports = generateMarkdown;
 // `;
 // }
 
-// module.exports = generateMarkdown;
+// // module.exports = generateMarkdown;
