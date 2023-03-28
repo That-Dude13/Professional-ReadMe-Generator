@@ -23,7 +23,7 @@ inquirer
         type: 'list',
         message: 'Please pick the license used',
         name: 'license',
-        choices: ['Apache 2.0','Apache 2.0','ISC','MIT','None'],
+        choices: ['Apache 2.0','ISC','MIT','None'],
             
         
    
@@ -72,7 +72,6 @@ inquirer
       if (err) {
         console.error(err);
       }
-      // file written successfully
     });
     })
   };
